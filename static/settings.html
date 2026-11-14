@@ -11,8 +11,9 @@
     <link rel="stylesheet" id="global" href="/assets/css/global.css?v=6" />
     <link rel="stylesheet" href="/assets/css/container.css?v=2" />
     <link rel="stylesheet" href="/assets/css/nav.css?v=01" />
-    <link rel="stylesheet" href="/assets/css/settings.css?v=06" />
+    <link rel="stylesheet" href="/assets/css/settings.css?v=07" />
     <script src="assets/js/f.js"></script>
+    <script defer src="/assets/js/ui-preferences.js?v=1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734"
      crossorigin="anonymous"></script>
 
@@ -21,6 +22,67 @@
     <div class="f-nav"></div>
     <div class="main">
       <div class="settings-container">
+
+        <section class="settings-card appearance-card" aria-labelledby="appearance-heading">
+          <div class="card-heading">
+            <div>
+              <span class="eyebrow">PERSONALIZATION</span>
+              <h3 id="appearance-heading">Appearance</h3>
+              <p>Adjust the interface to your preference. Changes save automatically on this device.</p>
+            </div>
+            <span class="appearance-mark" aria-hidden="true">✦</span>
+          </div>
+          <div class="preference-grid">
+            <label class="preference-field">
+              <span>Color theme</span>
+              <select id="ui-theme">
+                <option value="dark">Dark</option>
+                <option value="midnight">Midnight</option>
+                <option value="light">Light</option>
+              </select>
+            </label>
+            <label class="preference-field">
+              <span>Accent color</span>
+              <input id="ui-accent" type="color" value="#8b7cff" />
+            </label>
+            <label class="preference-field">
+              <span>Interface density</span>
+              <select id="ui-density">
+                <option value="comfortable">Comfortable</option>
+                <option value="compact">Compact</option>
+                <option value="spacious">Spacious</option>
+              </select>
+            </label>
+            <label class="preference-field">
+              <span>Corner style</span>
+              <select id="ui-corners">
+                <option value="rounded">Rounded</option>
+                <option value="soft">Soft</option>
+                <option value="sharp">Sharp</option>
+              </select>
+            </label>
+            <label class="preference-field">
+              <span>Text size</span>
+              <select id="ui-text-size">
+                <option value="small">Small</option>
+                <option value="normal">Default</option>
+                <option value="large">Large</option>
+              </select>
+            </label>
+            <label class="preference-field preference-toggle">
+              <span>
+                <strong>Reduce motion</strong>
+                <small>Turn off most interface animations</small>
+              </span>
+              <input id="ui-reduce-motion" type="checkbox" />
+            </label>
+          </div>
+          <div class="appearance-footer">
+            <span id="ui-preference-status" role="status">Your preferences are saved automatically.</span>
+            <button type="button" class="key-button secondary-button" id="ui-reset">Reset appearance</button>
+          </div>
+        </section>
+
         <div class="settings-card">
           <h3>About:Blank</h3>
           <p>

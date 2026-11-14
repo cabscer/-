@@ -48,6 +48,37 @@
    background-color: var(--text-dark);
 }
 
+
+/* Refreshed interface layer */
+:root {
+  --ui-accent: #8b7cff;
+  --ui-accent-rgb: 139, 124, 255;
+  --ui-radius: 18px;
+  --ui-card-padding: 24px;
+  --ui-font-scale: 1;
+  --ui-motion: 1;
+  --ui-border: rgba(255,255,255,.09);
+  --ui-shadow: 0 18px 48px rgba(0,0,0,.22);
+  color-scheme: dark;
+}
+html { scroll-behavior: smooth; }
+body {
+  color: var(--text-primary);
+  background-color: var(--background-color);
+  font-size: calc(16px * var(--ui-font-scale));
+  -webkit-font-smoothing: antialiased;
+}
+button, input, select, textarea { font: inherit; }
+button, .key-button, select, input {
+  transition: background-color .2s ease, border-color .2s ease,
+    box-shadow .2s ease, transform .2s ease, opacity .2s ease;
+}
+:focus-visible {
+  outline: 2px solid var(--ui-accent) !important;
+  outline-offset: 3px;
+}
+::selection { background: rgba(var(--ui-accent-rgb), .32); }
+
 body {
    font-family: "Inter", sans-serif;
    text-decoration: none;
